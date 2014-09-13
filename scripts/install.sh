@@ -9,6 +9,22 @@ link_file() {
   echo "linked $2 to $1"
 }
 
+remove_file() {
+  rm -rf $1
+  echo "removed $1"
+}
+
+delete_all() {
+  for source in `find $DOTFILES_ROOT -name \*.symlink`
+  do
+    dest="$HOME/.`basename \"${source%.*}\"`"
+    if [ -f $dest ] || [ -d $dest ]
+    then
+      remove_file $dest
+    fi
+  done
+}
+
 install_dotfiles() {
   echo "Installing dotfiles from $DOTFILES_ROOT"
   for source in `find $DOTFILES_ROOT -name \*.symlink`
@@ -20,6 +36,7 @@ install_dotfiles() {
 }
 
 echo ''
+delete_all
 install_dotfiles
 echo ''
 echo ' Installed!'
