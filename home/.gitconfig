@@ -1,0 +1,11 @@
+[user]
+    name = Ralph Rooding
+    email = ralph@ralphrooding.com
+[push]
+    default = simple
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[merge]
+    ff = true
