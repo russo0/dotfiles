@@ -1,0 +1,6 @@
+---
+0.1.0 filesize:~> 0.1.1,mail:>= 2.5.4&~> 2.5,nokogiri:>= 1.6.7.2&~> 1.6|checksum:e13f5f250a797e1a62b05d03de4312ebfea9829f0fc5a85535bbf082f7b0cca9
+0.2.0 filesize:~> 0.1.1,mail:>= 2.5.4&~> 2.5,nokogiri:>= 1.6.7.2&~> 1.6|checksum:320f5909dd14bdc24e2a9e2949711ebeff9d7a857b3afb5e93679386df3873ff
+0.3.0 filesize:~> 0.1.1,mail:>= 2.5.4&~> 2.5,nokogiri:>= 1.6.7.2&~> 1.6|checksum:9ed7980d436a0626663237d774f6ad0ac847b09954c5825978de9960e94107cc,ruby:>= 2.2.0
+0.3.1 filesize:~> 0.1.1,mail:>= 2.5.4&~> 2.5,nokogiri:>= 1.6.7.2&~> 1.6|checksum:6ef2522d004271d8e526041a435c0bf612e21ed09b6d5154ceac0561559f8ab4,ruby:>= 2.2.0
+0.4.0 filesize:~> 0.1.1,mail:>= 2.5.4&~> 2.5,nokogiri:>= 1.6.7.2&~> 1.6|checksum:08d25741175c1fe151e655081697888d0824cd790853bdac38b4cc9a91d20834,ruby:>= 2.2.0

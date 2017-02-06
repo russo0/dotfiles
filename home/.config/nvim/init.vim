@@ -2,20 +2,12 @@
 " https://github.com/junegunn/vim-plug#usage
 call plug#begin('~/.config/nvim/plugged')
 
-" Sensible default settings
-Plug 'tpope/vim-sensible'
-
-" Automatic tabwidth setting
-" Plug 'tpope/vim-sleuth'
-
-" Tmux bindings for nvim
-Plug 'hkupty/nvimux'
-
 " File browser
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Fast file searching
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/ag.vim'
 
 " File switching
 Plug 'tpope/vim-projectionist'
@@ -32,19 +24,25 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Git support
 Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
 
 " Languages
 Plug 'kchmck/vim-coffee-script'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'tpope/vim-rails'
+Plug 'slim-template/vim-slim'
+Plug 'rodjek/vim-puppet'
+Plug 'pangloss/vim-javascript'
 
 " Testing
 Plug 'janko-m/vim-test'
 Plug 'scrooloose/syntastic'
 
 " Formatting
-Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
+Plug 'jgdavey/vim-blockle'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -65,6 +63,17 @@ filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set list
+
+" Spacing
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype slim setlocal ts=4 sts=4 sw=4
+autocmd Filetype yml setlocal ts=4 sts=4 sw=4
+
+" Folding
+setlocal foldmethod=syntax
 
 " Python
 let g:python_host_prog = '/usr/local/bin/python'
@@ -100,10 +109,10 @@ autocmd AuNERDTreeCmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 " Nvimux configuration
 "
 " Use ctr+a as fake tmux binding
-let g:nvimux_prefix='<C-a>'
+" let g:nvimux_prefix='<C-a>'
 
 " NERDtree
-map <F2> :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode=2
 
 " CtrlP
@@ -147,7 +156,7 @@ function! test#ruby#rspec#executable()
 endfunction
 
 " Leader
-let mapleader="\<SPACE>"
+" let mapleader="\"
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -156,10 +165,3 @@ let g:syntastic_auto_loc_list = 1
 " Elm-vim
 let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
-
-" Spacing
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
-autocmd Filetype slim setlocal ts=4 sts=4 sw=4
-autocmd Filetype yml setlocal ts=4 sts=4 sw=4

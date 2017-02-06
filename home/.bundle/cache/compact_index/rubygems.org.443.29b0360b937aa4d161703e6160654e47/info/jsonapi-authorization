@@ -1,0 +1,8 @@
+---
+0.4.0 jsonapi-resources:= 0.7.0,pundit:~> 1.0|checksum:d9131804afffb449174244e1909a54fbf22b0728fc60e4770f5e43dd9dbd4e7f
+0.5.0 jsonapi-resources:= 0.7.0,pundit:~> 1.0|checksum:80afa25dbf52833e67ffb10ec12d3903b17f07f84374b853be1e176cfbdc3abf
+0.6.0 jsonapi-resources:= 0.7.0,pundit:~> 1.0|checksum:555832c47f20213efe59ba6dba8952914fa14a0cbc55d4ac441db579fcbbbf8c
+0.6.1 jsonapi-resources:~> 0.7.0,pundit:~> 1.0|checksum:7b110bca325d0a067a5e5b0b4b4ab7771e766a7058d7f08564e3d5948bf837df
+0.8.0 jsonapi-resources:~> 0.8.0.beta1,pundit:~> 1.0|checksum:4426d314bdfe9477c7e0fc6894fb606ddb07a2512d3be66f87177e5193da472f
+0.8.1 jsonapi-resources:~> 0.8.0.beta1,pundit:~> 1.0|checksum:d70fc7685e1032ef36478e853e9adc8a27fd960983b58abbdbbae29d09d8bbde
+0.8.2 jsonapi-resources:~> 0.8.0.beta1,pundit:~> 1.0|checksum:db4b7258c573e029f86fa2172b90ba3e591a6909d9f92afa1a41105a8bf9e75e
